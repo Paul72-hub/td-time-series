@@ -2,7 +2,7 @@
 
 ## 1. Stage 0 — Checking the "no real data available" assumption
 
-Il aurait suffi de lire la doc de l'API Open-Meteo Air Quality ou de faire un seul appel test avec le paramètre `past_days=90` pour voir si l'historique revenait. Ça prend deux minutes, alors que construire tout un générateur de fausses données à partir d'une hypothèse non vérifiée fait perdre du temps et donne des résultats qui ne veulent rien dire. Une hypothèse sur les données disponibles, c'est quelque chose à tester avant de concevoir le reste.
+Il aurait suffi de lire la doc de l'API Open-Meteo Air Quality ou de faire un seul appel test avec le paramètre `past_days=90` pour voir si l'historique revenait. Ça prend deux minutes, alors que construire tout un générateur de fausses données à partir d'une hypothèse non vérifiée fait perdre du temps et donne des résultats qui ne veulent rien dire. 
 
 ## 2. Stage 1 — Prediction for Le Mans CO2 over the last 90 days
 
