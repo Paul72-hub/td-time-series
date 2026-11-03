@@ -31,3 +31,5 @@ Je ferais confiance à la projection sur 3 jours maximum. La pente (+0,1 ppm/jou
 
 
 ## 7. Stage 6 — Why the pipeline kept working after one change
+
+J'ai remplacé Le Mans par Adélaïde (Australie) en changeant juste `LAT, LON`, et tout a marché : la tendance passe de +0,108 ppm/jour au Mans à -0,011 à Adélaïde, quasiment plate, ce qui colle avec le printemps dans l'hémisphère sud. Ça marche parce que les fonctions de `analyze_series.py` (`clean_series`, `rolling_mean`, `exponential_smoothing`, `linear_trend_projection`) ne connaissent ni le lieu, ni le polluant : elles prennent juste une liste de dates et de valeurs, et seul `fetch_series.py` sait d'où viennent les données. Par contre, ce qui n'était pas générique a cassé sans prévenir : le nom « Le Mans » écrit en dur dans la page, et surtout la note d'honnêteté, qui parle encore de l'été de l'hémisphère nord alors que pour Adélaïde c'est faux.
